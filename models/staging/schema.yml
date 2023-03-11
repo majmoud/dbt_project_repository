@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: majmoud
+    description: 'Utilisation de la base de données majmoud dans postgres'
+    database: majmoud
+    schema: public
+
+    tables:
+      - name: tracks
+        description: 'Definition du schema de la table tracks'
+        columns: 
+          - name: '"TrackId"'
+            tests:
+              - unique
+              - not_null
+
+          - name: '"Name"'
+
+          - name: '"AlbumId"'
+            tests:
+              - not_null
+
+          - name: '"MediaTypeId"'
+            tests:
+              - not_null
+
+          - name: '"GenreId"'
+            tests:
+              - not_null
+
+          - name: '"Composer"'
+
+          - name: '"Milliseconds"'
+
+          - name: '"Bytes"'
+
+          - name: '"UnitPrice"'
+
+      #- name: customers
+      #  columns:
+      #      tests:
+      #        - unique
