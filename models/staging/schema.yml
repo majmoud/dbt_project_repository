@@ -37,7 +37,70 @@ sources:
 
           - name: '"UnitPrice"'
 
-      #- name: customers
-      #  columns:
-      #      tests:
-      #        - unique
+      - name: albums
+        description: 'Definition du schema de la table albums'
+        columns: 
+          - name: '"AlbumId"'
+            tests:
+              - unique
+              - not_null
+
+          - name: '"Title"'
+
+          - name: '"ArtistId"'
+            tests:
+              - not_null
+
+
+      - name: artists
+        description: 'Definition du schema de la table artists'
+        columns: 
+          - name: '"ArtistId"'
+            tests:
+              - unique
+              - not_null
+
+          - name: '"Name"'
+
+
+      - name: invoices
+        description: 'Definition du schema de la table invoices'
+        columns: 
+          - name: '"InvoiceId"'
+            tests:
+              - unique
+              - not_null
+
+          - name: '"CustomerId"'
+            tests:
+              - not_null
+
+          - name: '"InvoiceDate"'
+
+          - name: '"BillingAddress"'
+          - name: '"BillingCity"'
+          - name: '"BillingState"'
+          - name: '"BillingCountry"'
+          - name: '"BillingPostalCode"'
+          - name: '"Total"'
+
+      
+      - name: invoice_items
+        description: 'Definition du schema de la table invoice_items'
+        columns: 
+          - name: '"InvoiceLineId"'
+            tests:
+              - unique
+              - not_null
+
+          - name: '"InvoiceId"'
+            tests:
+              - not_null
+
+          - name: '"TrackId"'
+            tests:
+              - not_null
+
+          - name: '"UnitPrice"'
+          - name: '"Quantity"'
+

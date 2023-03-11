@@ -8,7 +8,7 @@ with source_tracksBySmith as (
     FROM {{ source('majmoud', 'tracks') }}
     WHERE 
     	UPPER("Composer") like '%SMITH%' AND
-    	"MediaTypeId" BETWEEN 20 AND 100
+    	"MediaTypeId" BETWEEN 1 AND 10
     
 ),
 
