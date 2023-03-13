@@ -37,3 +37,6 @@ models:
     staging:
       +materialized: view
       +schema: staging
+
+#vars:
+#  TitleValuesFromAlbums: ['Balls to the Wall', 'Big Ones']

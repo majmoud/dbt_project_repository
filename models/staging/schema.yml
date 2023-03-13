@@ -105,5 +105,17 @@ sources:
           - name: '"Quantity"'
 
       
+      - name: albumsByArtists
+        description: 'Definition du schema de la table albumsByArtists'
+        columns: 
+          - name: 'ArtistId'
+            tests:
+              - unique
+              - not_null
+          - name: 'Name'
+          - name: 'AlbumId'
+          - name: 'Title'
+
+      
       
 
